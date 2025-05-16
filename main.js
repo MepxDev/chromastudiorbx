@@ -1,4 +1,4 @@
-// Theme Toggle Functionality
+// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -8,14 +8,14 @@ const currentTheme = localStorage.getItem('theme') ||
 
 if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode');
-    themeToggle.textContent = 'Light Mode';
+    themeToggle.textContent = '☀️ Light';
 }
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     localStorage.setItem('theme', theme);
-    themeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    themeToggle.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
 });
 
 // Smooth scrolling for navigation links
@@ -23,12 +23,18 @@ document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        if (targetId === '#') return;
         
-        window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-        });
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Update URL without page reload
+            history.pushState(null, null, targetId);
+        }
     });
 });
 
@@ -36,29 +42,35 @@ document.querySelectorAll('nav a').forEach(anchor => {
 const gamesContainer = document.getElementById('games-container');
 const games = [
     {
-        title: "Chroma Adventures",
-        description: "Explore vibrant worlds in this action-packed platformer.",
-        image: "https://via.placeholder.com/400x225/6e48aa/ffffff?text=Chroma+Adventures",
-        link: "https://www.roblox.com/games/..."
+        title: "Chroma Clash RBX",
+        description: "Fast-paced obstacle course with color-changing mechanics and special power-ups.",
+        image: "assets/game1.jpg",
+        link: "https://www.roblox.com/games/0000000000/Chroma-Clash-RBX"
     },
     {
-        title: "Neon Racing X",
-        description: "High-speed racing with stunning neon visuals.",
-        image: "https://via.placeholder.com/400x225/9d50bb/ffffff?text=Neon+Racing+X",
-        link: "https://www.roblox.com/games/..."
+        title: "Neon Racing RBX",
+        description: "High-speed racing through futuristic cities with customizable vehicles.",
+        image: "assets/game2.jpg",
+        link: "https://www.roblox.com/games/0000000000/Neon-Racing-RBX"
     },
     {
-        title: "Pixel Universe",
-        description: "Build and explore in this blocky sandbox world.",
-        image: "https://via.placeholder.com/400x225/4776e6/ffffff?text=Pixel+Universe",
-        link: "https://www.roblox.com/games/..."
+        title: "Color Universe RBX",
+        description: "Sandbox world where you control color physics and build amazing structures.",
+        image: "assets/game3.jpg",
+        link: "https://www.roblox.com/games/0000000000/Color-Universe-RBX"
+    },
+    {
+        title: "Spectrum Tower Defense",
+        description: "Defend your base using color-based towers and special abilities.",
+        image: "assets/game4.jpg",
+        link: "https://www.roblox.com/games/0000000000/Spectrum-TD"
     }
 ];
 
 function loadGames() {
     games.forEach(game => {
         const gameCard = document.createElement('div');
-        gameCard.className = 'game-card';
+        gameCard.className = 'game-card fade-in';
         
         gameCard.innerHTML = `
             <div class="game-image" style="background-image: url('${game.image}')"></div>
@@ -73,41 +85,74 @@ function loadGames() {
     });
 }
 
-// Load games when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    loadGames();
+// Animate stats counter
+function animateStats() {
+    const playersCount = document.getElementById('players-count');
+    const gamesCount = document.getElementById('games-count');
+    const membersCount = document.getElementById('members-count');
     
-    // Set team member avatars (replace with actual images)
-    const avatars = document.querySelectorAll('.member-avatar');
-    avatars.forEach((avatar, index) => {
-        avatar.style.backgroundImage = `url('https://via.placeholder.com/200x200/6e48aa/ffffff?text=Team+${index+1}')`;
-    });
-});
+    const animateValue = (element, start, end, duration) => {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = Math.floor(progress * (end - start) + start);
+            element.textContent = value.toLocaleString() + (element === playersCount ? '+' : '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    };
+    
+    animateValue(playersCount, 0, 10, 2000);
+    animateValue(gamesCount, 0, 5, 1500);
+    animateValue(membersCount, 0, 50, 2500);
+}
 
 // Scroll reveal animation
-window.addEventListener('scroll', revealOnScroll);
-
 function revealOnScroll() {
-    const sections = document.querySelectorAll('section');
+    const elements = document.querySelectorAll('.fade-in:not(.visible)');
     const windowHeight = window.innerHeight;
+    const revealPoint = 150;
     
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionVisible = 150;
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
         
-        if (sectionTop < windowHeight - sectionVisible) {
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('visible');
         }
     });
 }
 
-// Initialize sections with hidden state
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    // Load games
+    loadGames();
+    
+    // Animate stats
+    setTimeout(animateStats, 500);
+    
+    // Initialize scroll reveal
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Check on load
+    
+    // Add fade-in class to sections
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-in');
+    });
 });
 
-// Trigger initial reveal
-revealOnScroll();
+// Handle back/forward navigation
+window.addEventListener('popstate', function(e) {
+    const targetId = window.location.hash;
+    if (targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    }
+});
