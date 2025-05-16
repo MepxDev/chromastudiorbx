@@ -3,69 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chroma Studio | Roblox Game Development</title>
+    <title>Chroma Studio RBX | Premium Roblox Experiences</title>
+    <meta name="description" content="Official homepage of Chroma Studio RBX - Creators of high-quality Roblox games">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Chroma Studio Logo">
-                <h1>Chroma Studio</h1>
+                <img src="assets/logo.png" alt="Chroma Studio RBX Logo">
+                <h1>Chroma Studio <span>RBX</span></h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#games">Our Games</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li><a href="#join">Join Us</a></li>
+                    <li><a href="#join">Join</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+            <button id="theme-toggle" class="theme-btn">🌙 Dark</button>
         </div>
     </header>
 
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Creating Immersive Roblox Experiences</h2>
-                <p>Chroma Studio specializes in high-quality Roblox game development with stunning visuals and engaging gameplay.</p>
-                <a href="https://www.roblox.com/groups/..." class="btn" target="_blank">Visit Our Group</a>
+                <h2>Crafting Immersive <span>Roblox</span> Worlds</h2>
+                <p>We create premium Roblox experiences with stunning visuals, engaging gameplay, and innovative mechanics that push the platform's limits.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.roblox.com/groups/..." class="btn btn-primary" target="_blank">Join Our Group</a>
+                    <a href="#games" class="btn btn-secondary">Explore Games</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number" id="players-count">10M+</div>
+                        <div class="stat-label">Players</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="games-count">5+</div>
+                        <div class="stat-label">Games</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="members-count">50K+</div>
+                        <div class="stat-label">Members</div>
+                    </div>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="assets/banner.jpg" alt="Chroma Studio Game Showcase">
+                <img src="assets/banner.png" alt="Chroma Studio RBX Game Showcase">
             </div>
         </div>
     </section>
 
     <section id="games" class="games-section">
         <div class="container">
-            <h2>Our Popular Games</h2>
+            <h2>Our <span>Games</span></h2>
             <div class="games-grid" id="games-container">
-                <!-- Games will be loaded from main.js -->
+                <!-- Games loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Why <span>Choose Us</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Innovative Gameplay</h3>
+                    <p>We pioneer new game mechanics that redefine Roblox experiences</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Stunning Visuals</h3>
+                    <p>High-quality graphics that push Roblox's visual limits</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Regular Updates</h3>
+                    <p>Frequent content updates to keep games fresh</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Creative Worlds</h3>
+                    <p>Immersive environments with attention to detail</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="team" class="team-section">
         <div class="container">
-            <h2>Meet The Team</h2>
+            <h2>Meet The <span>Team</span></h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" style="background-image: url('assets/team1.png')"></div>
                     <h3>Alex</h3>
                     <p>Lead Developer</p>
+                    <div class="member-socials">
+                        <a href="#" target="_blank">Roblox</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" style="background-image: url('assets/team2.png')"></div>
                     <h3>Jamie</h3>
                     <p>Game Designer</p>
+                    <div class="member-socials">
+                        <a href="#" target="_blank">Roblox</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" style="background-image: url('assets/team3.png')"></div>
                     <h3>Taylor</h3>
                     <p>3D Artist</p>
+                    <div class="member-socials">
+                        <a href="#" target="_blank">Roblox</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,12 +135,12 @@
 
     <section id="join" class="join-section">
         <div class="container">
-            <h2>Join Our Community</h2>
             <div class="join-content">
-                <p>We're always looking for talented developers, designers, and testers to join our team!</p>
+                <h2>Ready to <span>Join</span> the Adventure?</h2>
+                <p>Become part of our growing community of players and creators</p>
                 <div class="social-links">
-                    <a href="#" class="discord-btn">Discord</a>
-                    <a href="#" class="roblox-btn">Roblox Group</a>
+                    <a href="https://discord.gg/..." class="discord-btn" target="_blank">Join Discord</a>
+                    <a href="https://www.roblox.com/groups/..." class="roblox-btn" target="_blank">Roblox Group</a>
                 </div>
             </div>
         </div>
@@ -86,11 +148,38 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Chroma Studio. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Chroma Studio RBX Logo">
+                    <h3>Chroma Studio <span>RBX</span></h3>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Games</h4>
+                        <a href="#" target="_blank">All Games</a>
+                        <a href="#" target="_blank">Coming Soon</a>
+                        <a href="#" target="_blank">Updates</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <a href="#" target="_blank">Discord</a>
+                        <a href="#" target="_blank">Roblox Group</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>About</h4>
+                        <a href="#" target="_blank">Our Team</a>
+                        <a href="#" target="_blank">Careers</a>
+                        <a href="#" target="_blank">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Chroma Studio RBX. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
