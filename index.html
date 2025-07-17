@@ -1,188 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chroma Studio RBX | Premium Roblox Experiences</title>
-    <meta name="description" content="Official homepage of Chroma Studio RBX - Creators of high-quality Roblox games">
+    <title>Chroma Studio | Premium Roblox Game Development</title>
+    <meta name="description" content="Chroma Studio creates immersive, high-quality Roblox experiences with stunning visuals and engaging gameplay.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Chroma Studio RBX Logo">
-                <h1>Chroma Studio <span>RBX</span></h1>
+            <a href="#home" class="logo">
+                <span class="logo-icon">C</span>
+                <span class="logo-text">hroma Studio</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#games">Games</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#join">Join</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="theme-btn">🌙 Dark</button>
         </div>
-    </header>
+    </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#team" class="mobile-nav-link">Team</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <div class="mobile-theme-toggle">
+                <span>Theme:</span>
+                <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h2>Crafting Immersive <span>Roblox</span> Worlds</h2>
-                <p>We create premium Roblox experiences with stunning visuals, engaging gameplay, and innovative mechanics that push the platform's limits.</p>
+                <h1 class="hero-title">
+                    <span class="title-gradient">Chroma Studio</span>
+                </h1>
+                <p class="hero-subtitle" id="animated-tagline">
+                    <!-- Animated tagline will be inserted by JavaScript -->
+                </p>
                 <div class="hero-buttons">
-                    <a href="https://www.roblox.com/groups/..." class="btn btn-primary" target="_blank">Join Our Group</a>
-                    <a href="#games" class="btn btn-secondary">Explore Games</a>
-                </div>
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat-number" id="players-count">10M+</div>
-                        <div class="stat-label">Players</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" id="games-count">5+</div>
-                        <div class="stat-label">Games</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" id="members-count">50K+</div>
-                        <div class="stat-label">Members</div>
-                    </div>
+                    <a href="#projects" class="btn btn-primary">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/banner.png" alt="Chroma Studio RBX Game Showcase">
+            <div class="hero-scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <section id="games" class="games-section">
+    <!-- About Section -->
+    <section id="about" class="section about">
         <div class="container">
-            <h2>Our <span>Games</span></h2>
-            <div class="games-grid" id="games-container">
-                <!-- Games loaded via JS -->
+            <div class="section-header">
+                <h2 class="section-title">About <span>Us</span></h2>
+                <p class="section-subtitle">Crafting the future of Roblox experiences</p>
             </div>
-        </div>
-    </section>
-
-    <section id="features" class="features-section">
-        <div class="container">
-            <h2>Why <span>Choose Us</span></h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Innovative Gameplay</h3>
-                    <p>We pioneer new game mechanics that redefine Roblox experiences</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2022, Chroma Studio is a passionate collective of developers, designers, and storytellers dedicated to pushing the boundaries of what's possible on the Roblox platform.</p>
+                    <p>We believe in creating games that aren't just fun, but visually stunning, technically impressive, and deeply engaging experiences that players will remember.</p>
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Innovative Gameplay</h3>
+                            <p>We design unique mechanics that challenge conventions and deliver fresh experiences.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Stunning Visuals</h3>
+                            <p>Our games feature cutting-edge graphics that push Roblox's visual limits.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Player-Focused</h3>
+                            <p>Every design decision centers around creating the best experience for our players.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Stunning Visuals</h3>
-                    <p>High-quality graphics that push Roblox's visual limits</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Regular Updates</h3>
-                    <p>Frequent content updates to keep games fresh</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Creative Worlds</h3>
-                    <p>Immersive environments with attention to detail</p>
+                <div class="about-image">
+                    <div class="glowing-box">
+                        <img src="https://via.placeholder.com/500x500/1a1a2e/ffffff?text=Roblox+Showcase" alt="Roblox game showcase" class="glow-image">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team" class="team-section">
+    <!-- Team Section -->
+    <section id="team" class="section team">
         <div class="container">
-            <h2>Meet The <span>Team</span></h2>
-            <div class="team-grid">
+            <div class="section-header">
+                <h2 class="section-title">Our <span>Team</span></h2>
+                <p class="section-subtitle">The creative minds behind the magic</p>
+            </div>
+            <div class="team-members">
+                <!-- Team Member 1 -->
                 <div class="team-member">
-                    <div class="member-avatar" style="background-image: url('assets/team1.png')"></div>
-                    <h3>Alex</h3>
-                    <p>Lead Developer</p>
-                    <div class="member-socials">
-                        <a href="#" target="_blank">Roblox</a>
-                        <a href="#" target="_blank">Twitter</a>
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a2e/ffffff?text=Alex+River" alt="Alex River">
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex River</h3>
+                        <span class="role">Founder & Lead Developer</span>
+                        <p>With over 7 years of Roblox experience, Alex specializes in complex game systems and optimization.</p>
                     </div>
                 </div>
+                
+                <!-- Team Member 2 -->
                 <div class="team-member">
-                    <div class="member-avatar" style="background-image: url('assets/team2.png')"></div>
-                    <h3>Jamie</h3>
-                    <p>Game Designer</p>
-                    <div class="member-socials">
-                        <a href="#" target="_blank">Roblox</a>
-                        <a href="#" target="_blank">Twitter</a>
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a2e/ffffff?text=Maya+Chen" alt="Maya Chen">
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
+                            <a href="#" aria-label="ArtStation"><i class="fab fa-artstation"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Maya Chen</h3>
+                        <span class="role">Art Director</span>
+                        <p>Maya brings our worlds to life with her exceptional 3D modeling and environmental design skills.</p>
                     </div>
                 </div>
+                
+                <!-- Team Member 3 -->
                 <div class="team-member">
-                    <div class="member-avatar" style="background-image: url('assets/team3.png')"></div>
-                    <h3>Taylor</h3>
-                    <p>3D Artist</p>
-                    <div class="member-socials">
-                        <a href="#" target="_blank">Roblox</a>
-                        <a href="#" target="_blank">Twitter</a>
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a2e/ffffff?text=Jamal+Williams" alt="Jamal Williams">
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
+                            <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Jamal Williams</h3>
+                        <span class="role">Sound Designer</span>
+                        <p>Jamal creates immersive audio experiences that elevate our games to cinematic quality.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/1a1a2e/ffffff?text=Taylor+Smith" alt="Taylor Smith">
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Taylor Smith</h3>
+                        <span class="role">Community Manager</span>
+                        <p>Taylor bridges the gap between our players and developers, ensuring our community thrives.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="join" class="join-section">
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
         <div class="container">
-            <div class="join-content">
-                <h2>Ready to <span>Join</span> the Adventure?</h2>
-                <p>Become part of our growing community of players and creators</p>
-                <div class="social-links">
-                    <a href="https://discord.gg/..." class="discord-btn" target="_blank">Join Discord</a>
-                    <a href="https://www.roblox.com/groups/..." class="roblox-btn" target="_blank">Roblox Group</a>
+            <div class="section-header">
+                <h2 class="section-title">Our <span>Projects</span></h2>
+                <p class="section-subtitle">Explore our portfolio of Roblox experiences</p>
+            </div>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Neon+Frontiers" alt="Neon Frontiers">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Neon Frontiers</h3>
+                                <p>Cyberpunk RPG with dynamic combat and an open world</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 5M+ Visits</span>
+                                    <span><i class="fas fa-star"></i> 4.8/5</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Quantum+Racers" alt="Quantum Racers">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Quantum Racers</h3>
+                                <p>High-speed anti-gravity racing with vehicle customization</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 3.2M+ Visits</span>
+                                    <span><i class="fas fa-star"></i> 4.7/5</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Mythic+Legends" alt="Mythic Legends">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Mythic Legends</h3>
+                                <p>Fantasy adventure with class-based combat and epic bosses</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 8.7M+ Visits</span>
+                                    <span><i class="fas fa-star"></i> 4.9/5</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Pixel+Paradise" alt="Pixel Paradise">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Pixel Paradise</h3>
+                                <p>Retro-style social hangout with mini-games and customization</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 2.1M+ Visits</span>
+                                    <span><i class="fas fa-star"></i> 4.6/5</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Deep+Space+Survival" alt="Deep Space Survival">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Deep Space Survival</h3>
+                                <p>Co-op survival game set in a procedurally generated galaxy</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 1.5M+ Visits</span>
+                                    <span><i class="fas fa-star"></i> 4.5/5</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Coming+Soon" alt="Coming Soon">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Project Aurora</h3>
+                                <p>Our next big title - stay tuned for more details!</p>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-clock"></i> In Development</span>
+                                </div>
+                                <a href="#" class="btn btn-small">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Player <span>Testimonials</span></h2>
+                <p class="section-subtitle">What our community says about us</p>
+            </div>
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>Chroma Studio's games are on another level. The attention to detail in Neon Frontiers blew me away - it feels like a AAA game but on Roblox!</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/1a1a2e/ffffff?text=Player" alt="Player">
+                            <div class="author-info">
+                                <h4>RobloxGamer123</h4>
+                                <span>500+ hours across Chroma games</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>I've been playing Mythic Legends since launch and the consistent updates show how much the team cares about their players. Best RPG on the platform!</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/1a1a2e/ffffff?text=Player" alt="Player">
+                            <div class="author-info">
+                                <h4>FantasyFan99</h4>
+                                <span>Mythic Legends top 100 player</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>Quantum Racers is the most polished racing game I've played on Roblox. The vehicle customization and physics are incredible.</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/80x80/1a1a2e/ffffff?text=Player" alt="Player">
+                            <div class="author-info">
+                                <h4>SpeedDemon</h4>
+                                <span>Esports competitor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>We're always excited to hear from potential collaborators, players, and fellow developers.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <a href="mailto:contact@chromastudio.com">contact@chromastudio.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Discord</h4>
+                                <a href="#" target="_blank">Join our server</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Twitter</h4>
+                                <a href="#" target="_blank">@ChromaStudio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="error-message" id="name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected></option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="support">Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="subject">Subject</label>
+                            <div class="error-message" id="subject-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. We'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Chroma Studio RBX Logo">
-                    <h3>Chroma Studio <span>RBX</span></h3>
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">C</span>
+                        <span class="logo-text">hroma Studio</span>
+                    </a>
+                    <p>Building the future of Roblox experiences through innovation, quality, and passion.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Games</h4>
-                        <a href="#" target="_blank">All Games</a>
-                        <a href="#" target="_blank">Coming Soon</a>
-                        <a href="#" target="_blank">Updates</a>
+                    <div class="links-column">
+                        <h4>Explore</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#testimonials">Testimonials</a>
                     </div>
-                    <div class="link-group">
-                        <h4>Community</h4>
-                        <a href="#" target="_blank">Discord</a>
-                        <a href="#" target="_blank">Roblox Group</a>
-                        <a href="#" target="_blank">Twitter</a>
-                    </div>
-                    <div class="link-group">
-                        <h4>About</h4>
-                        <a href="#" target="_blank">Our Team</a>
-                        <a href="#" target="_blank">Careers</a>
-                        <a href="#" target="_blank">Contact</a>
+                    <div class="links-column">
+                        <h4>Legal</h4>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Chroma Studio RBX. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+                <p>&copy; 2023 Chroma Studio. All rights reserved.</p>
+                <p>Not affiliated with Roblox Corporation.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="main.js"></script>
 </body>
