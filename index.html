@@ -386,7 +386,7 @@
       <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
     </div>
     <div class="contact-content">
-      <div class="contact-info">
+      <div class="contact-info" data-aos="fade-right">
         <h3>Contact Information</h3>
         <p>We're always excited to hear from potential collaborators, players, and fellow developers.</p>
         <div class="info-items">
@@ -420,60 +420,54 @@
         </div>
       </div>
 
-      <div class="contact-form">
-        <form id="contactForm" action="https://formspree.io/f/movlvepa" method="POST">
-          <label>
-            Your email:
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Your message:
-            <textarea name="message" required></textarea>
-          </label>
-          <button type="submit">Send Message</button>
+      <div class="contact-form" data-aos="fade-left">
+        <form id="contactForm" action="https://formspree.io/f/movlvepa" method="POST" novalidate>
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Your Name</label>
+            <span class="input-border"></span>
+            <div class="error-message" id="name-error"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email Address</label>
+            <span class="input-border"></span>
+            <div class="error-message" id="email-error"></div>
+          </div>
+          <div class="form-group">
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected></option>
+              <option value="collaboration">Collaboration</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="subject">Subject</label>
+            <span class="input-border"></span>
+            <div class="error-message" id="subject-error"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+            <span class="input-border"></span>
+            <div class="error-message" id="message-error"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow">
+            <span>Send Message</span>
+            <span class="hover-effect"></span>
+          </button>
         </form>
 
-        <div id="form-success" style="display:none; color: green; margin-top: 1em;">
-          <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
-        </div>
-        <div id="form-error" style="display:none; color: red; margin-top: 1em;">
-          Oops! Something went wrong. Please try again.
+        <div id="form-success" class="form-success" style="display:none;">
+          <i class="fas fa-check-circle"></i>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. We'll get back to you soon.</p>
         </div>
       </div>
     </div>
   </div>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('form-success');
-    const errorMessage = document.getElementById('form-error');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // prevent normal form submission
-      successMessage.style.display = 'none';
-      errorMessage.style.display = 'none';
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          successMessage.style.display = 'block';
-          form.reset();
-        } else {
-          errorMessage.style.display = 'block';
-        }
-      } catch (error) {
-        errorMessage.style.display = 'block';
-      }
-    });
-  </script>
 </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
