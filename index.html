@@ -423,26 +423,16 @@
       <div class="contact-form">
         <form id="contactForm" action="https://formspree.io/f/movlvepa" method="POST" novalidate>
           <div class="form-group">
-            <input type="text" id="name" name="name" required>
-            <label for="name">Your Name</label>
-            <div class="error-message" id="name-error"></div>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
           </div>
           <div class="form-group">
-            <input type="email" id="email" name="email" required>
-            <label for="email">Email Address</label>
-            <div class="error-message" id="email-error"></div>
+            <input type="email" id="email" name="email" required placeholder="Email Address">
           </div>
           <div class="form-group">
-            <input type="text" id="subject" name="subject" required>
-            <label for="subject">Subject</label>
-            <div class="error-message" id="subject-error"></div>
+            <input type="text" id="subject" name="_subject" required placeholder="Subject">
           </div>
-          <!-- Hidden _subject to send subject as email subject to Formspree -->
-          <input type="hidden" name="_subject" id="_subject" value="">
           <div class="form-group">
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <label for="message">Your Message</label>
-            <div class="error-message" id="message-error"></div>
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
@@ -457,20 +447,6 @@
   </div>
 </section>
 
-<script>
-  const subjectInput = document.getElementById('subject');
-  const hiddenSubject = document.getElementById('_subject');
-
-  // Update hidden _subject input whenever user types in the subject box
-  subjectInput.addEventListener('input', () => {
-    hiddenSubject.value = subjectInput.value;
-  });
-
-  // Initialize hidden _subject on page load if there is a value
-  if(subjectInput.value) {
-    hiddenSubject.value = subjectInput.value;
-  }
-</script>
 
     <!-- Footer -->
     <footer class="footer">
