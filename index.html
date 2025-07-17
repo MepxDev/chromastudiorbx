@@ -380,86 +380,66 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Get In <span>Touch</span></h2>
-            <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
-        </div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>We're always excited to hear from potential collaborators, players, and fellow developers.</p>
-                <div class="info-items">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <a href="mailto:contact@chromastudio.com">contact@chromastudio.com</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fab fa-discord"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Discord</h4>
-                            <a href="#" target="_blank">Join our server</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Twitter</h4>
-                            <a href="#" target="_blank">@ChromaStudio</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form action="https://formspree.io/f/movlvepa" method="POST" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                        <div class="error-message" id="name-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Email Address</label>
-                        <div class="error-message" id="email-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected></option>
-                            <option value="collaboration">Collaboration</option>
-                            <option value="support">Support</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <label for="subject">Subject</label>
-                        <div class="error-message" id="subject-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                        <div class="error-message" id="message-error"></div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-
-                <!-- Success Message (initially hidden) -->
-                <div id="form-success" class="form-success" style="display: none;">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Message Sent!</h3>
-                    <p>Thank you for reaching out. We'll get back to you soon.</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
     </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>We're always excited to hear from potential collaborators, players, and fellow developers.</p>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <a href="mailto:contact@chromastudio.com">contact@chromastudio.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fab fa-discord"></i>
+            </div>
+            <div class="info-text">
+              <h4>Discord</h4>
+              <a href="#" target="_blank">Join our server</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="info-text">
+              <h4>Twitter</h4>
+              <a href="#" target="_blank">@ChromaStudio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The form exactly as you provided it -->
+      <div class="contact-form">
+        <form
+          action="https://formspree.io/f/movlvepa"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" required></textarea>
+          </label>
+          <!-- You can add more fields here -->
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
 
