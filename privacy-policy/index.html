@@ -4,271 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Chroma Studio</title>
-    <meta name="description" content="Privacy Policy for Chroma Studio, explaining how we collect and protect your personal information.">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Comprehensive Privacy Policy for Chroma Studio detailing how we collect, use, and protect your personal information">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #6e45e2;
+            --primary-light: #8d6eff;
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8d1;
+            --background-dark: #0f0f1a;
+            --background-light: #1a1a2e;
+            --border-color: #2a2a3c;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--background-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .legal-header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--primary-color);
+            margin-bottom: 40px;
+        }
+        
+        .legal-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Content Styles */
+        .legal-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--background-light);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .legal-section h2 {
+            color: var(--primary-light);
+            margin-top: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .legal-section h3 {
+            color: var(--text-primary);
+            margin-top: 25px;
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .info-table th, .info-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .info-table th {
+            background-color: rgba(110, 69, 226, 0.2);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--background-light);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-content, .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">
-                <span class="logo-icon">C</span>
-                <span class="logo-text">hroma Studio</span>
-            </a>
-            <div class="nav-links">
-                <a href="/#about" class="nav-link">About</a>
-                <a href="/#team" class="nav-link">Team</a>
-                <a href="/#projects" class="nav-link">Projects</a>
-                <a href="/#contact" class="nav-link">Contact</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+    <main class="container">
+        <div class="legal-header">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: <span id="current-date">June 15, 2023</span></p>
+            <p>This policy explains how we collect, use, and protect your personal information.</p>
         </div>
-    </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="/#about" class="mobile-nav-link">About</a>
-            <a href="/#team" class="mobile-nav-link">Team</a>
-            <a href="/#projects" class="mobile-nav-link">Projects</a>
-            <a href="/#contact" class="mobile-nav-link">Contact</a>
-            <div class="mobile-theme-toggle">
-                <span>Theme:</span>
-                <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+        <div class="legal-content">
+            <section class="legal-section">
+                <h2>1. Information We Collect</h2>
+                <p>We collect information to provide and improve our services:</p>
+                
+                <h3>Directly Provided Information</h3>
+                <ul>
+                    <li>Account registration details</li>
+                    <li>Payment information (processed by Roblox)</li>
+                    <li>Communications with our team</li>
+                </ul>
+                
+                <h3>Automatically Collected Information</h3>
+                <table class="info-table">
+                    <tr><th>Data Type</th><th>Purpose</th><th>Example</th></tr>
+                    <tr><td>Usage Data</td><td>Improve gameplay</td><td>Level completion times</td></tr>
+                    <tr><td>Device Info</td><td>Optimization</td><td>Device model, OS version</td></tr>
+                </table>
+            </section>
 
-    <!-- Main Content -->
-    <main class="legal-page">
-        <div class="container">
-            <div class="legal-header">
-                <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: <span id="current-date"></span></p>
-                <p class="policy-intro">This Privacy Policy explains how Chroma Studio ("we", "us", or "our") collects, uses, and protects your personal information when you use our games and services.</p>
-            </div>
+            <section class="legal-section">
+                <h2>2. How We Use Your Data</h2>
+                <p>Your information helps us:</p>
+                <ul>
+                    <li>Provide and maintain our games</li>
+                    <li>Process transactions</li>
+                    <li>Improve user experience</li>
+                    <li>Ensure security</li>
+                    <li>Communicate with you</li>
+                </ul>
+            </section>
 
-            <div class="legal-content">
-                <section class="legal-section">
-                    <h2>1. Information We Collect</h2>
-                    <p>When you interact with our Roblox games and services, we may collect:</p>
-                    
-                    <h3>1.1 Information You Provide</h3>
-                    <ul>
-                        <li>Roblox username and user ID</li>
-                        <li>Contact information when you communicate with us</li>
-                        <li>Payment information for in-game purchases (processed by Roblox)</li>
-                        <li>Survey responses and feedback</li>
-                    </ul>
-                    
-                    <h3>1.2 Automatically Collected Information</h3>
-                    <ul>
-                        <li>Gameplay data and statistics</li>
-                        <li>Device information (type, operating system)</li>
-                        <li>IP address and approximate location</li>
-                        <li>Cookies and similar technologies (see Section 5)</li>
-                    </ul>
-                    
-                    <h3>1.3 Information from Roblox</h3>
-                    <p>We may receive information from Roblox Corporation in accordance with their platform policies, including:</p>
-                    <ul>
-                        <li>Basic account information</li>
-                        <li>Purchase history related to our games</li>
-                        <li>Age verification status</li>
-                    </ul>
-                </section>
+            <section class="legal-section">
+                <h2>3. Data Sharing</h2>
+                <p>We only share data when necessary:</p>
+                
+                <h3>Service Providers</h3>
+                <ul>
+                    <li>Payment processors</li>
+                    <li>Analytics services</li>
+                    <li>Cloud hosting providers</li>
+                </ul>
+                
+                <h3>Legal Requirements</h3>
+                <p>We may disclose information if required by law.</p>
+            </section>
 
-                <section class="legal-section">
-                    <h2>2. How We Use Your Information</h2>
-                    <p>We use the information we collect to:</p>
-                    <ul>
-                        <li>Provide, maintain, and improve our games and services</li>
-                        <li>Process transactions and deliver virtual items</li>
-                        <li>Respond to your inquiries and provide support</li>
-                        <li>Analyze gameplay to enhance user experience</li>
-                        <li>Prevent cheating, fraud, and unauthorized access</li>
-                        <li>Comply with legal obligations</li>
-                        <li>Communicate important updates and announcements</li>
-                    </ul>
-                </section>
-
-                <section class="legal-section">
-                    <h2>3. Data Sharing and Disclosure</h2>
-                    <p>We may share your information in the following circumstances:</p>
-                    
-                    <h3>3.1 With Service Providers</h3>
-                    <p>We may engage third-party companies to assist with:</p>
-                    <ul>
-                        <li>Analytics and performance monitoring</li>
-                        <li>Customer support services</li>
-                        <li>Payment processing (through Roblox)</li>
-                    </ul>
-                    
-                    <h3>3.2 For Legal Compliance</h3>
-                    <p>We may disclose information when required by law or to:</p>
-                    <ul>
-                        <li>Comply with legal processes</li>
-                        <li>Protect our rights and property</li>
-                        <li>Prevent harm to others</li>
-                    </ul>
-                    
-                    <h3>3.3 Business Transfers</h3>
-                    <p>In the event of a merger, acquisition, or sale of assets, user information may be transferred as part of the transaction.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>4. Data Security</h2>
-                    <p>We implement appropriate technical and organizational measures to protect your information, including:</p>
-                    <ul>
-                        <li>Encryption of sensitive data</li>
-                        <li>Regular security assessments</li>
-                        <li>Access controls and authentication procedures</li>
-                    </ul>
-                    <p>However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>5. Cookies and Tracking Technologies</h2>
-                    <p>We and our partners may use cookies and similar technologies to:</p>
-                    <ul>
-                        <li>Remember user preferences</li>
-                        <li>Analyze game performance</li>
-                        <li>Deliver targeted advertisements (through Roblox's systems)</li>
-                    </ul>
-                    <p>You can manage cookie preferences through your browser settings, but this may affect certain game features.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>6. Children's Privacy</h2>
-                    <p>Our games are designed for a general audience but may be played by children under 13 through the Roblox platform:</p>
-                    <ul>
-                        <li>We comply with the Children's Online Privacy Protection Act (COPPA)</li>
-                        <li>We do not knowingly collect personal information from children under 13 without parental consent</li>
-                        <li>Parents can contact us to review or delete their child's information</li>
-                    </ul>
-                    <p>Roblox provides parental controls that apply to our games through their platform.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>7. International Data Transfers</h2>
-                    <p>As our services are global, your information may be transferred to and processed in countries other than your own, including the United States where our servers are located. These countries may have different data protection laws.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>8. Your Rights and Choices</h2>
-                    <p>Depending on your jurisdiction, you may have certain rights regarding your personal information:</p>
-                    <ul>
-                        <li><strong>Access:</strong> Request a copy of your data</li>
-                        <li><strong>Correction:</strong> Update inaccurate information</li>
-                        <li><strong>Deletion:</strong> Request deletion of your data</li>
-                        <li><strong>Opt-out:</strong> Object to certain processing</li>
-                    </ul>
-                    <p>To exercise these rights, please contact us at <a href="mailto:privacy@chromastudio.com">privacy@chromastudio.com</a>.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>9. Data Retention</h2>
-                    <p>We retain your information only as long as necessary to:</p>
-                    <ul>
-                        <li>Provide our services</li>
-                        <li>Comply with legal obligations</li>
-                        <li>Resolve disputes</li>
-                        <li>Enforce our agreements</li>
-                    </ul>
-                    <p>Gameplay data is typically retained for 12 months after account inactivity.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>10. Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy periodically. We will notify users of significant changes through:</p>
-                    <ul>
-                        <li>In-game announcements</li>
-                        <li>Our website</li>
-                        <li>Email (for registered users)</li>
-                    </ul>
-                    <p>Your continued use of our services after changes constitutes acceptance of the updated policy.</p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>11. Contact Us</h2>
-                    <p>If you have questions about this Privacy Policy or our data practices, please contact our Data Protection Officer at:</p>
-                    <address>
-                        Chroma Studio<br>
-                        Attn: Privacy Officer<br>
-                        Email: <a href="mailto:privacy@chromastudio.com">privacy@chromastudio.com</a>
-                    </address>
-                    <p>For Roblox account-related inquiries, please contact Roblox Support as we cannot access or modify Roblox account information directly.</p>
-                </section>
-            </div>
+            <section class="legal-section">
+                <h2>4. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Request correction</li>
+                    <li>Request deletion</li>
+                    <li>Object to processing</li>
+                </ul>
+                <p>Contact us at <a href="mailto:privacy@chromastudio.com">privacy@chromastudio.com</a> to exercise these rights.</p>
+            </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <span class="logo-icon">C</span>
-                        <span class="logo-text">hroma Studio</span>
-                    </a>
-                    <p>Building the future of Roblox experiences through innovation, quality, and passion.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="Roblox"><i class="fas fa-gamepad"></i></a>
-                    </div>
+                <div>
+                    <h3>Chroma Studio</h3>
+                    <p>Building the future of Roblox experiences</p>
                 </div>
                 <div class="footer-links">
-                    <div class="links-column">
-                        <h4>Explore</h4>
-                        <a href="/#about">About Us</a>
-                        <a href="/#team">Our Team</a>
-                        <a href="/#projects">Projects</a>
-                        <a href="/#testimonials">Testimonials</a>
-                    </div>
-                    <div class="links-column">
+                    <div>
                         <h4>Legal</h4>
-                        <a href="/terms-of-service">Terms of Service</a>
-                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/terms-of-service">Terms of Service</a><br>
+                        <a href="/privacy-policy">Privacy Policy</a><br>
                         <a href="/cookie-policy">Cookie Policy</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Chroma Studio. All rights reserved.</p>
-                <p>Not affiliated with Roblox Corporation.</p>
+                <p>&copy; 2023 Chroma Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="/main.js"></script>
     <script>
-        // Set current date and year
+        // Set current date
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         });
-        
-        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
